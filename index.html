@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BTA WEB — Soluciones web para negocios de fumigación</title>
+  <meta name="description" content="Desarrollo web, PWAs, constancias de servicio, PDFs con firma y automatización para empresas de fumigación. Rápido, moderno y listo para crecer." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BTA WEB — Soluciones web para negocios de fumigación" />
+  <meta property="og:description" content="Páginas, PWAs para constancias, PDFs con firma y automatización para tu operación." />
+  <meta property="og:image" content="img/og-image.png" />
+  <meta property="og:url" content="https://tusitio-ejemplo.com" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BTA WEB — Soluciones web para negocios de fumigación" />
+  <meta name="twitter:description" content="Digitaliza tu negocio: páginas, PWAs, constancias y PDFs con firma." />
+  <meta name="twitter:image" content="img/og-image.png" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" href="img/favicon.ico">
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JSON-LD Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BTA WEB",
+    "url": "https://tusitio-ejemplo.com",
+    "logo": "https://tusitio-ejemplo.com/img/logo-512.png",
+    "sameAs": [
+      "https://www.facebook.com/btaweb",
+      "https://www.instagram.com/btaweb"
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics 4 (reemplaza G-XXXXXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- Alternativa sin cookies: Plausible (descomenta y reemplaza dominio) -->
+  <!-- <script defer data-domain="tusitio-ejemplo.com" src="https://plausible.io/js/script.js"></script> -->
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm nav-compact" aria-label="Principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img src="img/logo-512.png" alt="Logo BTA WEB" width="36" height="36" class="rounded" />
+        <strong class="brand-title">BTA WEB</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navTop" aria-controls="navTop" aria-expanded="false" aria-label="Mostrar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navTop">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#por-que">¿Por qué digitalizar?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-3 mb-2 mb-lg-0">
+            <a class="btn btn-dark btn-sm" href="https://wa.me/527551277694?text=Hola%20BTA%20WEB%2C%20quiero%20cotizar" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero container" id="inicio">
+    <div class="row align-items-center gx-5">
+      <div class="col-lg-6 order-lg-1 order-2">
+        <h1 class="display-5 fw-bold mb-3 heading-cg">Impulsamos tu negocio de fumigación con soluciones web modernas</h1>
+        <p class="lead text-body-custom">Aplicaciones web, sitios y PWAs para constancias de servicio, PDFs con firma digital y automatización de procesos clave.</p>
+        <ul class="list-unstyled text-body-custom small mb-3">
+          <li>✔️ Implementación rápida | ✔️ Diseño limpio | ✔️ Soporte cercano</li>
+        </ul>
+        <div class="d-flex flex-wrap gap-3 mt-3">
+          <a href="https://wa.me/527551277694?text=Hola%20BTA%20WEB%2C%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-dark btn-lg">Hablar por WhatsApp</a>
+          <a href="#trabajos" class="btn btn-outline-dark btn-lg">Ver trabajos</a>
+        </div>
+        <div class="mini-badges mt-4">
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Bootstrap</span>
+          <span class="chip">PWA</span>
+          <span class="chip">PDF & Firmas</span>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+        <div class="hero-visual reveal-up">
+          <div class="reactish-bg"></div>
+          <img src="img/slide1.png" class="img-fluid rounded-4 shadow-sm" alt="Vista previa BTA WEB" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 fw-bold heading-cg">Servicios diseñados para tu operación</h2>
+        <p class="text-body-custom">Digitalizamos procesos de empresas de fumigación y negocios afines.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Aplicaciones web a medida</h5>
+              <p class="card-text">Gestión de clientes, órdenes, rutas, reportes y roles con flujos a tu medida.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Páginas y sitios web</h5>
+              <p class="card-text">Sitios enfocados en conversión: rápidos, modernos y listos para posicionarse.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Constancias de servicio (PWA)</h5>
+              <p class="card-text">Folios, fotos y firmas desde el móvil; funciona offline y sincroniza al volver.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Llenado de PDFs con firma</h5>
+              <p class="card-text">Automatiza tus documentos con validaciones, sello de tiempo y envío inmediato.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Catálogo → WhatsApp</h5>
+              <p class="card-text">Muestra servicios/productos y cierra por WhatsApp, simple y efectivo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Integraciones y automatización</h5>
+              <p class="card-text">Cotizaciones, recordatorios, pagos, QR y reportes conectados a tu operación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ DIGITALIZAR -->
+  <section class="section section-muted" id="por-que">
+    <div class="container">
+      <div class="row align-items-center gx-5">
+        <div class="col-lg-6">
+          <h2 class="h1 fw-bold mb-3 heading-cg">¿Por qué digitalizar y automatizar?</h2>
+          <ul class="feature-list">
+            <li><strong>Menos tiempo, menos errores:</strong> formularios guiados y datos validados.</li>
+            <li><strong>Trazabilidad total:</strong> historial de servicios, fotos, firmas y geolocalización.</li>
+            <li><strong>Firmas digitales y PDFs:</strong> constancias listas para enviar o archivar.</li>
+            <li><strong>PWA sin internet:</strong> registra en campo y sincroniza después.</li>
+            <li><strong>Mejor experiencia del cliente:</strong> confirma, factura y comparte resultados en minutos.</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div id="carouselTrabajos" class="carousel slide shadow-sm rounded-4 overflow-hidden reveal-up" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2500">
+                <img src="img/slide1.png" class="d-block w-100" alt="Trabajo 1" />
+              </div>
+              <div class="carousel-item" data-bs-interval="2500">
+                <img src="img/slide2.png" class="d-block w-100" alt="Trabajo 2" />
+              </div>
+              <div class="carousel-item" data-bs-interval="2500">
+                <img src="img/slide3.png" class="d-block w-100" alt="Trabajo 3" />
+              </div>
+              <div class="carousel-item" data-bs-interval="2500">
+                <img src="img/slide4.png" class="d-block w-100" alt="Trabajo 4" />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTrabajos" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTrabajos" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRABAJOS / PORTAFOLIO (mini) -->
+  <section class="section" id="trabajos">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 fw-bold heading-cg">Algunos trabajos</h2>
+        <p class="text-body-custom">Interfaces limpias, flujos claros y rendimiento real en campo.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="portfolio-card reveal-up">
+            <img src="img/slide2.png" class="img-fluid rounded-4" alt="Panel de constancias" loading="lazy" />
+            <div class="p-3">
+              <h6 class="mb-1">Panel para constancias</h6>
+              <small class="text-body-custom">PWA con firmas y QR</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfolio-card reveal-up">
+            <img src="img/slide3.png" class="img-fluid rounded-4" alt="Landing conversion" loading="lazy" />
+            <div class="p-3">
+              <h6 class="mb-1">Landing orientada a conversión</h6>
+              <small class="text-body-custom">Rapidez y SEO base</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="portfolio-card reveal-up">
+            <img src="img/slide4.png" class="img-fluid rounded-4" alt="Automatización PDF" loading="lazy" />
+            <div class="p-3">
+              <h6 class="mb-1">Flujos automatizados</h6>
+              <small class="text-body-custom">PDFs con datos y firmas</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO + SKILLS -->
+  <section class="section section-muted">
+    <div class="container">
+      <div class="row align-items-center gx-5">
+        <div class="col-lg-6">
+          <h2 class="h1 fw-bold mb-4 heading-cg">Nuestro proceso</h2>
+          <ol class="process-list">
+            <li><strong>Descubrimiento:</strong> entendemos tu operación y objetivos.</li>
+            <li><strong>Propuesta:</strong> alcance, tiempos y cotización clara.</li>
+            <li><strong>Diseño:</strong> UI limpio y moderno.</li>
+            <li><strong>Desarrollo:</strong> Framework Django, Bootstrap, JavaScript.</li>
+            <li><strong>Entrega y soporte:</strong> despliegue, capacitación y mejoras continuas.</li>
+          </ol>
+        </div>
+        <div class="col-lg-6">
+          <div class="skills-panel reveal-up">
+            <h5 class="mb-3">Stack y skills</h5>
+            <div class="skills-grid">
+              <span class="skill">HTML5</span>
+              <span class="skill">CSS3 / SASS</span>
+              <span class="skill">JavaScript (ES6+)</span>
+              <span class="skill">Bootstrap</span>
+              <span class="skill">Django</span>
+              <span class="skill">PWA / Service Worker</span>
+              <span class="skill">LocalStorage / IndexedDB</span>
+              <span class="skill">QR / Códigos</span>
+              <span class="skill">PDF y firmas</span>
+              <span class="skill">SEO técnico</span>
+              <span class="skill">Accesibilidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS (microcopy mejorado) -->
+  <section class="section" id="precios">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 fw-bold heading-cg">Planes claros, resultados rápidos</h2>
+        <p class="text-body-custom">Precios en MXN. Facturamos y ajustamos el alcance a tu presupuesto.</p>
+      </div>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-md-6 col-lg-4">
+          <div class="card price-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Página web</h5>
+              <p class="price">$2,500</p>
+              <ul class="list-unstyled small">
+                <li>1–3 secciones que convierten</li>
+                <li>Responsive con Bootstrap</li>
+                <li>SEO base + performance</li>
+              </ul>
+              <a class="btn btn-dark w-100" href="https://wa.me/527551277694?text=Quiero%20una%20p%C3%A1gina%20web%20de%202500" target="_blank" rel="noopener">Empezar ahora</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card price-card reveal-up h-100 popular">
+            <div class="card-body">
+              <div class="badge-top">Más elegido</div>
+              <h5 class="card-title">Sitio web más grande</h5>
+              <p class="price">$3,500</p>
+              <ul class="list-unstyled small">
+                <li>4–8 secciones / páginas</li>
+                <li>Componentes interactivos</li>
+                <li>Formularios y métricas</li>
+              </ul>
+              <a class="btn btn-dark w-100" href="https://wa.me/527551277694?text=Cotizaci%C3%B3n%20sitio%20web%203500" target="_blank" rel="noopener">Quiero este</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card price-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Catálogo → WhatsApp</h5>
+              <p class="price">$6,500</p>
+              <ul class="list-unstyled small">
+                <li>Listado de servicios/productos</li>
+                <li>Sin backend</li>
+                <li>Botones directos a WhatsApp</li>
+              </ul>
+              <a class="btn btn-dark w-100" href="https://wa.me/527551277694?text=Cotizaci%C3%B3n%20cat%C3%A1logo%20a%20WhatsApp%206500" target="_blank" rel="noopener">Listar mi catálogo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card price-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">PWA constancia de servicio</h5>
+              <p class="price">$3,000</p>
+              <ul class="list-unstyled small">
+                <li>Folios, fotos y firmas</li>
+                <li>PDF al instante</li>
+                <li>Funciona sin internet</li>
+              </ul>
+              <a class="btn btn-dark w-100" href="https://wa.me/527551277694?text=PWA%20constancia%20de%20servicio%203000" target="_blank" rel="noopener">Quiero la PWA</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card price-card reveal-up h-100">
+            <div class="card-body">
+              <h5 class="card-title">Personalizado</h5>
+              <p class="price">A convenir</p>
+              <ul class="list-unstyled small">
+                <li>Hecho a la medida</li>
+                <li>Integración con tus sistemas</li>
+                <li>Escalable y mantenible</li>
+              </ul>
+              <a class="btn btn-dark w-100" href="https://wa.me/527551277694?text=Necesito%20una%20soluci%C3%B3n%20personalizada" target="_blank" rel="noopener">Cuéntame tu idea</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-3 small text-body-custom">Nota: Podemos ajustar el alcance a tu presupuesto según lo que requieras.</p>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="section section-emphasis">
+    <div class="container">
+      <div class="row align-items-center gx-5">
+        <div class="col-lg-7">
+          <h2 class="h1 fw-bold heading-cg">¿Quiénes somos?</h2>
+          <p class="mb-3 text-body-custom">Somos BTA WEB. Llevamos negocios de fumigación a digital con productos prácticos y listos para usar en campo.</p>
+          <p class="mb-4 text-body-custom">Metodología ligera, comunicación directa y entregas iterativas para que veas valor desde el primer sprint.</p>
+          <div class="d-flex gap-3">
+            <a href="https://wa.me/527551277694?text=Hola%20BTA%20WEB" target="_blank" rel="noopener" class="btn btn-dark">Contacto inmediato</a>
+            <!-- TODO: Reemplazar con la URL real de tu página de Facebook -->
+            <a href="https://www.facebook.com/btaweb" target="_blank" rel="noopener" class="btn btn-outline-dark">Facebook BTA WEB</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="reactish-card reveal-up">
+            <div class="reactish-bg"></div>
+            <div class="p-4">
+              <h5 class="mb-2">Enfoque</h5>
+              <p class="mb-0 small text-body-custom">UX clara • Performance • Accesibilidad • Seguridad básica • Escalabilidad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO WhatsApp-ready -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 fw-bold heading-cg">Cuéntanos tu proyecto</h2>
+        <p class="text-body-custom">Armamos el mensaje y abrimos WhatsApp con tus datos.</p>
+      </div>
+      <form class="contact-card mx-auto" style="max-width: 760px;">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="cNombre">Nombre</label>
+            <input class="form-control" id="cNombre" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="cEmpresa">Empresa</label>
+            <input class="form-control" id="cEmpresa" type="text" placeholder="Nombre de la empresa" />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="cServicio">Servicio</label>
+            <select class="form-select" id="cServicio">
+              <option value="Página web $2500">Página web ($2,500)</option>
+              <option value="Sitio web $3500">Sitio web más grande ($3,500)</option>
+              <option value="Catálogo→WhatsApp $6500">Catálogo → WhatsApp ($6,500)</option>
+              <option value="PWA constancia $3000">PWA constancia de servicio ($3,000)</option>
+              <option value="Personalizado">Personalizado</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="cPresupuesto">Presupuesto aprox. (MXN)</label>
+            <input class="form-control" id="cPresupuesto" type="number" min="0" step="500" placeholder="Ej. 3500" />
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="cMensaje">Mensaje</label>
+            <textarea class="form-control" id="cMensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mt-4">
+          <button class="btn btn-dark btn-lg" id="btnWhats">Enviar por WhatsApp</button>
+          <a class="btn btn-outline-dark btn-lg" href="#precios">Ver planes</a>
+        </div>
+        <p class="form-help small text-body-custom mt-2">Abriremos <strong>wa.me</strong> con tu mensaje prellenado (no guardamos datos).</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 fw-bold heading-cg">Preguntas frecuentes</h2>
+      </div>
+      <div class="accordion reveal-up" id="faqAcc">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">¿Cuánto tardan los proyectos?</button></h2>
+          <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-body-custom">Una landing simple: 3–7 días. Una PWA o sitio más grande: 2–4 semanas, según alcance.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">¿Pueden integrar firmas y generar PDFs?</button></h2>
+          <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-body-custom">Sí. Diseñamos flujos de firmas (digitales o manuscritas) y generamos PDFs con datos, sello de tiempo y folio.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">¿Trabajan por proyecto o por horas?</button></h2>
+          <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-body-custom">Generalmente por proyecto con precio fijo. Si necesitas apoyo continuo, ofrecemos bolsas de horas.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q4"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">¿Pueden ajustarse a mi presupuesto?</button></h2>
+          <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqAcc">
+            <div class="accordion-body text-body-custom">Sí. Cuéntanos lo que necesitas y proponemos alternativas que se ajusten a tu inversión.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section section-cta text-center">
+    <div class="container">
+      <h2 class="h1 fw-bold mb-3 heading-cg">¿Listo para digitalizar tu operación?</h2>
+      <p class="mb-4 text-body-custom">Escríbenos por WhatsApp o Facebook y te respondemos el mismo día.</p>
+      <div class="d-flex gap-3 justify-content-center">
+        <a class="btn btn-dark btn-lg" href="https://wa.me/527551277694?text=Hola%20BTA%20WEB" target="_blank" rel="noopener">WhatsApp</a>
+        <!-- TODO: Reemplaza con el enlace real de tu página de Facebook -->
+        <a class="btn btn-outline-dark btn-lg" href="https://www.facebook.com/btaweb" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <img src="img/logo-512.png" width="28" height="28" alt="BTA WEB" />
+        <span class="fw-semibold">BTA WEB</span>
+        <span class="text-body-custom">© <span id="year"></span></span>
+      </div>
+      <div class="socials d-flex align-items-center gap-3">
+        <a class="social" href="https://wa.me/527551277694" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+          <svg width="26" height="26" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M128 20C69.7 20 22 67.7 22 126c0 18.7 4.8 36.3 13.3 51.7L20 236l59.5-15.6C94.4 227.2 110.8 232 128 232c58.3 0 106-47.7 106-106S186.3 20 128 20zm0 192c-15.6 0-30.2-4.2-42.8-11.5l-3.1-1.8-35.3 9.3 9.6-34.4-2-3.2C47.7 157.2 44 142.1 44 126c0-46.4 37.6-84 84-84s84 37.6 84 84-37.6 84-84 84zm49.6-54.8c-2.7-1.3-16-7.9-18.5-8.8-2.5-.9-4.4-1.3-6.3 1.3-1.9 2.6-7.2 8.8-8.8 10.6-1.6 1.9-3.3 2-6 0.7-2.7-1.3-11.3-4.2-21.6-13.4-8-7.1-13.4-15.8-15-18.5-1.6-2.7-.2-4.2 1.1-5.6 1.1-1.1 2.7-3 4-4.5 1.3-1.6 1.7-2.7 2.6-4.6.9-1.9.4-3.4-.2-4.7-.7-1.3-6.3-15.2-8.6-20.8-2.3-5.6-4.7-4.8-6.3-4.9-1.6-.1-3.4-.1-5.2-.1s-4.7.7-7.2 3.4c-2.5 2.6-9.5 9.2-9.5 22.4s9.7 26 11 27.7c1.4 1.9 19 29 46.2 40.7 6.5 2.8 11.5 4.5 15.5 5.8 6.5 2.1 12.4 1.8 17-1 5.2-3.2 16-14.5 18.2-19.8 2.2-5.3 2.2-9.8 1.5-10.8-.7-1-2.5-1.6-5.2-2.9z"/></svg>
+        </a>
+        <a class="social" href="https://www.facebook.com/btaweb" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 5 3.66 9.14 8.44 9.93v-7.02H7.9v-2.9h2.4V9.8c0-2.37 1.41-3.68 3.56-3.68 1.03 0 2.11.18 2.11.18v2.33h-1.19c-1.17 0-1.54.73-1.54 1.48v1.78h2.63l-.42 2.9h-2.21V22c4.78-.79 8.44-4.93 8.44-9.93z"/></svg>
+        </a>
+        <a class="social" href="https://www.instagram.com/btaweb" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 13 5.51 5.51 0 0 0 12 7.5zm0 2A3.5 3.5 0 1 1 8.5 13 3.5 3.5 0 0 1 12 9.5zM18 6.3a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

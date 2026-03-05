@@ -1,0 +1,102 @@
+:root{
+  --bg:#ffffff;
+  --bg-muted:#f5f5f7;
+  --ink:#14161a;
+  --ink-soft:#4d5562;
+  --primary:#2038ff;
+  --accent:#00b8ff;
+  --card:#ffffff;
+  --border:#e7ebf3;
+  --shadow:0 10px 30px rgba(0,0,0,.06);
+  --radius:20px;
+}
+
+
+html,body{background:var(--bg); color:var(--ink); font-family:"Inter","Poppins","Segoe UI","Helvetica Neue",Arial,sans-serif;}
+.brand-title{font-family:"Century Gothic","Inter",sans-serif; letter-spacing:.5px}
+.navbar{background:var(--bg)!important}
+.navbar .nav-link{color:var(--ink-soft)}
+.navbar .nav-link:hover{color:var(--ink)}
+.navbar .btn{border-color:var(--ink); color:var(--ink)}
+.navbar .btn.btn-dark{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.navbar .btn.btn-outline-dark:hover{background:var(--ink); color:var(--bg)}
+.nav-compact{transition:all .25s ease}
+.nav-compact.scrolled{padding-top:.25rem; padding-bottom:.25rem; box-shadow:var(--shadow)}
+
+.hero{padding-top:7rem; padding-bottom:4rem}
+.heading-cg{font-family:"Century Gothic","Inter",sans-serif}
+.text-body-custom{color:var(--ink-soft)}
+
+.mini-badges .chip{display:inline-block; padding:.35rem .6rem; border:1px solid var(--border); border-radius:999px; font-size:.8rem; color:var(--ink-soft); background:linear-gradient(180deg,var(--card),rgba(0,0,0,0))}
+
+.section{padding:4.5rem 0}
+.section-muted{background:var(--bg-muted)}
+.section-emphasis{background:linear-gradient(180deg,var(--bg), rgba(0,0,0,.02))}
+.section-cta{padding:5rem 0}
+
+.hero-visual{position:relative}
+.reactish-bg{position:absolute; inset:-10%; filter:blur(40px); background:
+  radial-gradient(40% 35% at 20% 20%, rgba(32,56,255,.25), transparent),
+  radial-gradient(35% 35% at 80% 30%, rgba(0,184,255,.25), transparent),
+  radial-gradient(40% 40% at 50% 80%, rgba(32,56,255,.15), transparent);
+  z-index:0; border-radius:32px}
+.hero-visual img{position:relative; z-index:1}
+
+.card{border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); background:var(--card)}
+.service-card .card-title{font-weight:700}
+.portfolio-card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow)}
+
+.feature-list{list-style:none; padding:0; margin:0}
+.feature-list li{padding-left:1.2rem; position:relative; margin:.5rem 0; color:var(--ink-soft)}
+.feature-list li::before{content:""; width:.5rem; height:.5rem; border-radius:50%; background:var(--primary); position:absolute; left:0; top:.6rem}
+
+.process-list{padding-left:1.2rem}
+.process-list li{margin:.6rem 0; color:var(--ink-soft)}
+
+.skills-panel{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:1.5rem}
+.skills-grid{display:flex; flex-wrap:wrap; gap:.5rem}
+.skill{padding:.4rem .6rem; background:conic-gradient(from 180deg at 50% 50%, rgba(32,56,255,.08), rgba(0,184,255,.08)); border:1px solid var(--border); border-radius:10px; color:var(--ink); font-size:.85rem}
+
+.price-card{position:relative}
+.price-card .price{font-size:2rem; font-weight:800; font-family:"Century Gothic","Inter",sans-serif}
+.price-card.popular{outline:2px solid var(--primary)}
+.price-card .badge-top{position:absolute; top:-12px; right:16px; background:var(--primary); color:#fff; font-size:.75rem; padding:.25rem .5rem; border-radius:999px}
+
+.footer{padding:1.2rem 0; background:var(--bg); border-top:1px solid var(--border)}
+.social{display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border:1px solid var(--border); border-radius:12px; color:var(--ink); background:var(--card); transition:all .2s ease}
+.social:hover{transform:translateY(-2px); box-shadow:var(--shadow); color:var(--primary)}
+
+/* Reveal on scroll */
+.reveal-up{opacity:0; transform:translateY(16px); transition:all .6s cubic-bezier(.2,.7,.2,1)}
+.reveal-up.visible{opacity:1; transform:none}
+
+/* Contact form */
+.contact-card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:1.5rem}
+.form-help{color:var(--ink-soft)}
+
+
+/* Evita que los fondos decorativos bloqueen clics */
+.reactish-bg {
+  pointer-events: none;
+}
+
+/* Recorta los fondos decorativos (blur/gradientes) para que no “empujen” el ancho */
+.hero-visual,
+.reactish-card {
+  overflow: hidden;
+}
+
+/* Asegura que el overlay decorativo no capture clics ni cause interacciones raras */
+.reactish-bg {
+  pointer-events: none;
+}
+
+/* Ajuste fino SOLO para pantallas pequeñas: reducimos el "desborde" del glow */
+@media (max-width: 576px) {
+  .reactish-bg {
+    inset: -2%;        /* antes -10% */
+    filter: blur(24px); /* antes 40px */
+  }
+}
+
+html, body { overflow-x: hidden; }
