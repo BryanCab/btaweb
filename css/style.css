@@ -100,3 +100,79 @@ html,body{background:var(--bg); color:var(--ink); font-family:"Inter","Poppins",
 }
 
 html, body { overflow-x: hidden; }
+
+/* === Micro-interacciones: SERVICIOS (hover + spotlight + tilt) === */
+#servicios .service-card{
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;                       /* spotlight seguro */
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #fff, #fafcff);
+  box-shadow: var(--shadow);
+  /* Tu reveal ya maneja opacidad/transform vía .reveal-up/.visible (lo respetamos) */
+  transition:
+    transform .22s cubic-bezier(.2,.7,.2,1),
+    box-shadow .22s cubic-bezier(.2,.7,.2,1),
+    border-color .22s cubic-bezier(.2,.7,.2,1);
+  will-change: transform;
+}
+
+
+/* Hover/Focus: elevación y borde más vivo */
+#servicios .service-card:hover,
+#servicios .service-card:focus-visible{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(24,39,75,.12), 0 2px 6px rgba(24,39,75,.08);
+  border-color: #cfe2ff;
+}
+#servicios .service-card:hover::before,
+#servicios .service-card:hover::after,
+#servicios .service-card:focus-visible::before,
+#servicios .service-card:focus-visible::after{
+  opacity: 1;
+}
+
+/* (Opcional) llamado a la acción dentro de la card, si lo agregas más adelante */
+#servicios .service-card .svc-cta{
+  color: var(--accent);
+  font-weight: 600;
+  opacity: .85;
+  transition: transform .22s cubic-bezier(.2,.7,.2,1), opacity .22s ease;
+}
+#servicios .service-card:hover .svc-cta{
+  transform: translateX(2px); opacity: 1;
+}
+
+/* Ripple click (ligero) */
+#servicios .service-card { position: relative; }
+#servicios .service-card .svc-ripple{
+  position: absolute; border-radius: 50%;
+  background: rgba(99,102,241,.18);
+  transform: scale(.2); opacity: 0;
+  animation: svcRipple .45s ease;
+  pointer-events: none; z-index: 2;
+}
+@keyframes svcRipple{
+  0%   { transform: scale(.2); opacity: .6; }
+  100% { transform: scale(1);  opacity: 0;  }
+}
+
+/* Accesibilidad / rendimiento */
+@media (prefers-reduced-motion: reduce){
+  #servicios .service-card,
+  #servicios .service-card::before,
+  #servicios .service-card::after{
+    transition: none !important;
+  }
+}
+@media (hover: none){ /* táctil: desactivar hover pesado */
+  #servicios .service-card:hover{
+    transform: none;
+    box-shadow: var(--shadow);
+  }
+  #servicios .service-card:hover::before,
+  #servicios .service-card:hover::after{
+    opacity: 0;
+  }
+}

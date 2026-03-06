@@ -93,4 +93,66 @@
       window.open(url, '_blank', 'noopener');
     });
   }
+
+  // --- Micro-interacciones: SERVICIOS (spotlight + tilt + ripple) ---
+{
+  const cards = $$('#servicios .service-card');
+  if (cards.length) {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    cards.forEach(card => {
+      let raf = null;
+
+      function onMove(e){
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${pointerX}px`);
+        card.style.setProperty('--my', `${pointerY}px`);
+
+        if (reduce) return;
+
+        // Tilt 3D ligerísimo (máx. ~6°), GPU-safe
+        if (!raf) {
+          raf = requestAnimationFrame(() => {
+            const rx = ((pointerY / rect.height) - 0.5) * -6;
+            const ry = ((pointerX / rect.width)  - 0.5) *  6;
+            // No pisamos tu reveal: sobre el estado actual sólo añadimos rotación
+            const base = card.matches(':hover, :focus-visible') ? 'translateY(-2px)' : '';
+            card.style.transform = `${base} rotateX(${rx}deg) rotateY(${ry}deg)`;
+            raf = null;
+          });
+        }
+      }
+
+      function resetTilt(){
+        card.style.transform = ''; // vuelve al estado base (tu CSS + reveal)
+      }
+
+      // Spotlight/tilt
+      card.addEventListener('pointermove', onMove, {passive:true});
+      card.addEventListener('pointerleave', resetTilt);
+
+      // Accesibilidad teclado: al enfocar, centramos el spotlight y marcamos visible si aplica
+      card.addEventListener('focus', () => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${rect.width/2}px`);
+        card.style.setProperty('--my', `${rect.height/2}px`);
+        card.classList.add('visible'); // compatible con tu reveal existente
+      }, true);
+
+      // Ripple click sutil (opcional)
+      card.addEventListener('click', (e) => {
+        const r = document.createElement('span');
+        r.className = 'svc-ripple';
+        const rect = card.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        r.style.width = r.style.height = size + 'px';
+        r.style.left = (e.clientX - rect.left - size/2) + 'px';
+        r.style.top  = (e.clientY - rect.top  - size/2) + 'px';
+        card.appendChild(r);
+        setTimeout(() => r.remove(), 450);
+      });
+    });
+  }
+}
+
 })();
